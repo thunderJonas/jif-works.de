@@ -1,0 +1,237 @@
+/* ------------------------- */
+/*         Nav-Menu          */
+/* ------------------------- */
+.primary-header{
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2vw;
+    z-index: 2222;
+}
+.topnav-right {
+    float: right;
+    align-items: end;
+}
+.primary-navigation {
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(.4rem);
+    --gap: clamp(1.5rem, 3vw, 3.5rem);
+    --underline-gap: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.mobile-nav-toggle {
+    display: none;
+}
+.primary-navigation a {
+    text-decoration: none;
+}
+.primary-navigation a > span {
+    color: rgba(11, 13, 23, 0.76);
+    /*text-shadow: 0 0 5px hsl(0, 0%, 8%), 0 0 5px #141414;*/
+    font-weight: 800;
+    margin-right: .5em;
+}
+
+@media (max-width: 35rem) {
+    .primary-navigation {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(.4rem);
+        /*background: rgba(245, 245, 245, 0.38);*/
+        position: fixed;
+        align-items: center;
+        font-family: var(--ff-sans-cond);
+        font-weight: 300;
+        --underline-gap: .5rem;
+        inset: 0 0 0 25%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+    .primary-navigation.underline-indicators > .active {
+        border: 0;
+    }
+    .primary-navigation.underline-indicators > .active:hover, .primary-navigation.underline-indicators > .active:focus {
+        border-bottom: .2rem solid rgba(255, 255, 255, 0.96);
+    }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url(./assets/shared/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+        cursor: pointer;
+    }
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(./assets/shared/icon-close.svg);
+    }
+    .mobile-nav-toggle:focus-visible {
+        outline: 5px solid rgba(0, 149, 255, 0.54);
+        border-radius: .2rem;
+        outline-offset: 5px;
+    }
+}
+@media (min-width: 35em) and (max-width: 44.999em) {
+    .primary-navigation{
+        padding-inline: 2rem;
+        align-items: end;
+    }
+}
+@media (min-width: 45em) {
+    .primary-navigation {
+        margin-block: 2rem;
+    }
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 3px;
+        width: 100%;
+        margin-right: -5.4rem;
+        margin-left: -4rem;
+        background: rgba(208, 214, 249, 0.81);
+        order: 1;
+        z-index: -1;
+    }
+    nav {
+        order: 2;
+    }
+}
+@supports (backdrop-filter: blur(.4rem)) {
+    .primary-navigation {
+        padding-inline: 3.4rem;
+        background: rgba(59, 59, 59, 0.39);
+        border-radius: .4rem;
+        backdrop-filter: blur(.4rem);
+    }
+}
+/* ------------------------- */
+/*    Nav-Menu - E N D -     */
+/* ------------------------- */
+/* ------------------------- */
+/*           Meins           */
+/* ------------------------- */
+/*@media screen and (min-width: 35rem){
+    .supcol span{
+        grid-column: 2; !important;
+    }
+}*/
+
+.logo {
+    padding: 0;
+    margin: 0 clamp(1rem, 3vw, 3.5rem);
+    min-width: 320px;
+    max-width: 322px;
+    height: auto;
+}
+
+
+
+
+
+
+/* ------------------------- */
+/*        Meins - E N D -    */
+/* ------------------------- */
+/* ------------------------- */
+/*           Stars           */
+/* ------------------------- */
+
+/*<div id="background" class="background"></div>
+<div id="midground" class="midground"></div>
+<div id="foreground" class="foreground"></div>*/
+
+@-webkit-keyframes STAR-MOVES {
+    from {
+        background-position: 10% 10%;
+    }
+    to {
+        background-position: 1500% 500%;
+    }
+}
+
+.background {
+    min-height: 100vh;
+    background: black url(https://images.photowall.com/products/58533/starfield-purp.jpg?h=699&q=85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -3;
+    -webkit-animation-name: STAR-MOVES;
+    -webkit-animation-duration: 500s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+}
+
+.midground {
+    min-height: 100vh;
+
+    background: url(https://bit.ly/3vtcaor);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    -webkit-animation-name: STAR-MOVES;
+    -webkit-animation-duration: 1000s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.foreground {
+    min-height: 100vh;
+
+    background: url(https://earthsky.org/upl/2018/11/pleiades-seven-sisters-nov2019-e1572962425736.jpg);
+    opacity: 0.13;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    -webkit-animation-name: STAR-MOVES;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@media (min-width: 45em) {
+    .background {
+        width: 100%;
+    }
+
+    .midground {
+        width: 100%;
+    }
+
+    .foreground {
+        width: 100%;
+    }
+}
+
+/* ------------------------- */
+/*        Stars - E N D -    */
+/* ------------------------- */
+
+

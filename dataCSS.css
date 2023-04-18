@@ -1,0 +1,155 @@
+
+
+.data-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#data .data {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+.data .col-right a {
+    color: #c696ff;
+    /*text-decoration: none;*/
+    opacity: 1;
+    transition: 0.3s;
+}
+.data .col-right a:hover {opacity: 0.6}
+
+#data .col-left {
+    width: 250px;
+    height: 360px;
+}
+#data .col-right {
+    width: 100%;
+}
+#data .col-right h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    margin-bottom: 10px;
+}
+#data .col-right p {
+    margin-bottom: 20px;
+}
+#data .col-right .cta {
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+#data .col-left .about-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /*border: 10px solid white;*/
+}
+#data .col-left .about-img::after {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 33px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid #6a00ec;
+    z-index: -1;
+}
+
+    /*FLOATING MENU DOTS*/
+/* FLOATING MENU */
+/*
+#float-menu {
+    position:fixed;
+    margin-top:44px;
+    right:16px;
+    width:26px;
+    height:238px;
+    z-index:9999;
+}
+
+#float-menu nav ul {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+
+#float-menu li{
+    position:relative;
+    display: block;
+    width:26px;
+    height:26px;
+    margin-bottom:8px;
+}
+
+#float-menu nav a {
+    position:relative;
+    right:-50px;
+    display: block;
+    width:26px;
+    height:26px;
+    z-index:9999;
+}
+
+#float-menu a{
+    background-color:#bada11;
+    border-radius:50%;
+}
+
+#float-menu nav li:hover,
+#float-menu nav a:hover,
+#float-menu nav li.active,
+#float-menu nav li.active a{
+    background-color:#aecd00;
+    border-radius:50%;
+}*/
+
+#left-menu {
+    position: fixed;
+    top: 10rem;
+    left: -22px;
+    width: 80px;
+    margin-top: 20px;
+    z-index: 99;
+}
+#left-menu ul {
+    list-style: none;
+    padding-left: 10px;
+    z-index: 999;
+}
+#left-menu ul li {
+    position: relative;
+    float: right;
+    margin-bottom: 0.6rem;
+    width: 90%;
+    height: 30px;
+    z-index: 999;
+}
+#left-menu ul li a {
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: #6a00ec;
+    position: absolute;
+    top: 250px;
+    right: 30px;
+    z-index: 999;
+    border-radius: 100%;
+}
+#left-menu ul li a:hover {
+    background-color: #3c008a;
+    width: 26px;
+    height: 26px;
+    padding: 5px;
+}
+
+
+
+

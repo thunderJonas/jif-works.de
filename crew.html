@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>jif-works.de CREW</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/jif-icon2-32x32.png">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+          rel="stylesheet">
+    <!-- Our custom shit -->
+<!--        <link rel="stylesheet" href="index.css">-->
+    <!--    <link rel="stylesheet" href="second.css">-->
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="basis.css">
+    <script src="jjs-nav_menu.js" defer></script>
+    <script src="tabs.js" defer></script>
+
+</head>
+
+<body class="crew">
+<!--<div id="loader">
+    <div class="loader"></div>
+</div>-->
+<a class="skip-to-content" href="#main">Skip to content</a>
+<header class="primary-header flex">
+    <div>
+        <a href="index.html"><img src="./assets/jif-LOGO.PNG" alt="jif logo" class="logo"></a>
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span>00</span>Home</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="contact.html"><span>01</span>Kontakt</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span>02</span>Destination</a>
+            <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span>03</span>Crew</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span>04</span>Technology</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="data.html"><span aria-hidden="true">05</span>Data</a>
+        </ul>
+    </nav>
+</header>
+
+<main id="main" class="grid-container grid-container--crew flow">
+    <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
+
+    <div class="dot-indicators flex" role="tablist" aria-label="crew member list">
+        <button aria-selected="true" aria-controls="commander-tab" role="tab" data-image="commander-image"
+                tabindex="0"><span class="sr-only">The commander</span></button>
+        <button aria-selected="false" aria-controls="mission-tab" role="tab" data-image="mission-image"
+                tabindex="-1"><span class="sr-only">The mission specialist</span></button>
+        <button aria-selected="false" aria-controls="pilot-tab" role="tab" data-image="pilot-image"
+                tabindex="-1"><span class="sr-only">The pilot</span></button>
+        <button aria-selected="false" aria-controls="crew-tab" role="tab" data-image="crew-image"
+                tabindex="-1"><span class="sr-only">The crew engineer</span></button>
+    </div>
+
+    <!-- commander -->
+    <article class="crew-details flow" id="commander-tab" role="tabpanel" tabindex="0" title="Website erstellen lassen">
+        <header class="flow flow--space-small">
+            <h2 class="fs-600 ff-serif uppercase no_padding">Commander</h2>
+            <p class="text-accent fs-700 uppercase ff-serif">Douglass Hurley</p>
+        </header>
+        <p style="padding-bottom: 1rem">Douglas Gerald Hurley is an American software engineer, former Marine Corps pilot
+            and former NASA astronaut, Marketing Specialist and MEME soldier. He launched into web space for the third time as
+            commander of Crew Dragon Demo-2. </p>
+    </article>
+
+    <!-- mission specialist -->
+    <article hidden class="crew-details flow" id="mission-tab" role="tabpanel" tabindex="0">
+        <header class="flow flow--space-small">
+            <h2 class="fs-600 ff-serif uppercase ">IT specialist</h2>
+            <p class="text-accent fs-700 uppercase ff-serif no_padding " title="Responsive web Design">Jonas I. Fischer</p>
+        </header>
+            <p style="padding-bottom: 1rem">Jonas Fischer is the founder and CEO of &nbsp; <br>
+                <span style="font-size: 2rem"><a href="index.html"  class="text-accent" > jif-works.de</a></span>, <br>
+                the company behind the Linux-based Ubuntu operating system. Currently
+                saving the world. Fisher became the first Neusser to travel to web space as a space tourist.<br>
+                And he hasn't even started yet...</p>
+    </article>
+
+    <!-- pilot -->
+    <article hidden class="crew-details flow" id="pilot-tab" role="tabpanel" tabindex="0">
+        <header class="flow flow--space-small">
+            <h2 class="fs-600 ff-serif uppercase">Social Media Pilot</h2>
+            <p class="text-accent fs-700 uppercase ff-serif no_padding">Victorius Glover</p>
+        </header>
+        <p style="padding-bottom: 1rem">Pilot on the first operational flight of the SpaceX Crew Dragon to the
+            International Space Station. Glover is a commander in the U.S. Navy where
+            he pilots an F/A-18.He was a crew member of Expedition 64, and served as a
+            station systems flight engineer.</p>
+    </article>
+
+    <!-- engineer -->
+    <article hidden class="crew-details flow" id="crew-tab" role="tabpanel" tabindex="0">
+        <header class="flow flow--space-small">
+            <h2 class="fs-600 ff-serif uppercase">SEO Engineer</h2>
+            <p class="text-accent fs-700 uppercase ff-serif no_padding">Anousheh Ansari</p>
+        </header>
+        <p style="padding-bottom: 1rem">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems.
+            Ansari was the fourth self-funded space tourist, the first self-funded woman to
+            fly to the ISS, and the first Iranian in space.</p>
+    </article>
+
+
+    <picture id="commander-image">
+        <source srcset="assets/crew/image-douglas-hurley.webp" type="image/webp">
+        <img src="assets/crew/image-douglas-hurley.png" style="max-height: 550px" alt="Douglas Hurley">
+    </picture>
+    <picture hidden id="mission-image">
+        <img class="wjf" src="assets/crew/image-Jonas_I_Fischer2.png" style="max-height: 550px" alt="Jonas Fischer">
+    </picture>
+    <picture hidden id="pilot-image">
+        <source srcset="assets/crew/image-victor-glover.webp" type="image/webp">
+        <img src="assets/crew/image-victor-glover.png" style="max-height: 550px" alt="Victor Glover">
+    </picture>
+    <picture hidden id="crew-image">
+        <source srcset="assets/crew/image-anousheh-ansari.webp" type="image/webp">
+        <img src="assets/crew/image-anousheh-ansari.png" style="max-height: 550px" alt="Anousheh Ansari">
+    </picture>
+</main>
+</body>
+</html>

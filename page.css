@@ -1,0 +1,327 @@
+/* ------------------- */
+/* Page specific       */
+/* ------------------- */
+/* ----------------------------- */
+/*           Layout              */
+/* ----------------------------- */
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+    /* flex: 1; */
+}
+.flex-Right {
+    align-content: end;
+    align-items: end;
+}
+.col {
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    /*--gap: 1rem;*/
+    gap: var(--gap, 1rem);
+}
+.grid-container {
+    text-align: center;
+    align-content: center;
+    display: grid;
+    max-width: 96vw;
+    place-items: center;
+    row-gap: 2%;
+    padding-inline: .5rem;
+    padding-bottom: 2rem;
+    margin-top: 1.5em;
+}
+
+.grid-container * {
+    /*min-width: 25ch;*/
+    /*max-width: 50ch;*/
+}
+/*.grid-container p:not([class]) {
+    max-width: 50ch;
+    outline: 3px solid limegreen;
+}*/
+.numbered-title {
+    /*border: 2px solid red;*/
+    grid-area: title;
+}
+@media (min-width: 35em) {
+    .grid-container * {
+        /*min-width: 25ch;*/
+        max-width: 55ch;
+    }
+    .fs-650_jones {
+        font-size: 2.2rem;
+    }
+    main h1 p{
+        /*margin-left: 2rem;*/
+    }
+}
+@media (min-width: 45em) {
+    .grid-container {
+        /*border: 5px solid #f600ff;*/
+        text-align: center;
+        /*margin-top: 0;*/
+        /*align-content: start;*/
+        /*align-items: center;*/
+        column-gap: var(--gap, 2rem);
+        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+    }
+
+    .grid-container--home > *:first-child {
+        grid-column: 2;
+        /*outline: 1px solid red;*/
+    }
+
+    .grid-container--home > *:last-child {
+        grid-column: 3;
+        /*outline: 1px solid yellow;*/
+    }
+
+    .grid-container--home {
+        padding-bottom: max(8rem, 20vh);
+        align-items: end;
+    }
+}
+/* ----------------------------- */
+/*    - E N D - of Layout        */
+/* ----------------------------- */
+/* ------------------- */
+/* home */
+/* ------------------- */
+
+body {
+    min-width: 100vw;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+/*!* home *!*/
+ .home {
+    min-width: 100vw;
+    background-image: url(./assets/destination/megaSTARS.jpeg);
+} 
+ 
+@media (min-width: 35rem) {
+    .home {
+        background-position: center center;
+        /* background-image: url(./assets/home/background-home-tablet.jpg); */
+    }
+}
+
+@media (min-width: 45rem) {
+    .home {
+        background-image: url(./assets/destination/megaSTARS.jpeg);
+    }
+} 
+
+/* ------------------- */
+/*    Destination      */
+/* ------------------- */
+main article p{
+    max-width: 40ch;
+    padding-left: .5rem;
+}
+
+
+.tab-list [role="tab"]:focus {
+    color: rgb(117, 117, 117);
+    /*border: 2px solid rgba(37, 37, 37, 0);*/
+    /*border-inline: 2px solid gray;*/
+}
+.destination-bg{
+    background-image: url("assets/destination/background-destination-mobile.jpg");
+    background-size: cover;
+}
+.grid-container--destination {
+    --flow-space: 2rem;
+    grid-template-areas:
+        'title'
+        'image'
+        'tabs'
+        'content'
+}
+.grid-container--destination > img {
+    grid-area: image;
+    max-width: 60%;
+}
+.grid-container--destination > picture {
+    grid-area: image;
+    max-width: 60%;
+    align-self: start;
+}
+.grid-container--destination > .tab-list {
+    grid-area: tabs;
+}
+.grid-container--destination > .destination-info {
+    grid-area: content;
+}
+.destination-info{}
+.destination-meta{
+    flex-direction: row;
+    justify-content: center;
+    border-top: 1px solid hsl( var(--clr-white) / .1);
+    padding-top: 2.5rem;
+    margin: 2.5rem 1em;
+}
+.destination-meta p {
+    font-size: 1.5rem;
+}
+@media (min-width: 35em) {
+    .numbered-title {
+        justify-self: start;
+        margin-top: 2rem;
+    }
+    .destination-meta {
+        /*justify-self: center;*/
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .grid-container--destination > picture,
+    .grid-container--crew > picture {
+        grid-area: image;
+        max-width: 85%;
+    }
+}
+@media (min-width: 45em) {
+    .grid-container--destination {
+        justify-items: start;
+        align-content: start;
+        grid-template-areas:
+            '. title title .'
+            '. image tabs .'
+            '. image content .';
+    }
+    .grid-container--destination > picture,
+    .grid-container--crew > picture {
+        max-width: 100%;
+    }
+    .destination-meta {
+        /*justify-self: center;*/
+        /*flex-direction: row;*/
+        --gap: min(6vw, 3rem);
+        /*justify-content: start;*/
+    }
+}
+/* body {
+    background-position: bottom center;
+} */
+/* destination */
+.destination {
+    background-size: cover;
+
+    background-image: url(./assets/destination/megaSTARS.jpeg);
+}
+@media (min-width: 35rem) {
+    .destination {
+        background-position: center center;
+        background-image: url(./assets/destination/megaSTARS.jpeg);
+    }
+}
+@media (min-width: 45rem) {
+    .destination {
+        background-image: url(./assets/destination/megaSTARS.jpeg);
+    }
+}
+/* ------------------------ */
+/*   E N D  of Destination  */
+/* ------------------------ */
+/* ------------------------ */
+/*       Crew Layout        */
+/* ------------------------ */
+.grid-container--crew {
+    --flow-space: 2rem;
+    grid-template-areas:
+        'title'
+        'image'
+        'tabs'
+        'content';
+}
+.grid-container--crew > {
+    grid-area: image;
+    max-width: 60%;
+    border-bottom: 2px solid var(--clr__accent-transparent);
+}
+
+.grid-container--crew > .dot-indicators {
+    grid-area: tabs;
+}
+
+.grid-container--crew > .crew-details {
+    grid-area: content;
+}
+.crew-details h2 {
+    opacity: .5;
+}
+.crew-details p {
+    margin-left: .5rem;
+}
+.grid-container--crew > picture {
+    align-self: end;
+    border-bottom: 2px solid var(--clr__accent-transparent);
+}
+.crew > picture {
+    align-self: end;
+    border-bottom: 2px solid var(--clr__accent-transparent);
+    align-self: start;
+}
+
+@media (min-width: 35em) {
+.grid-container--crew {
+    grid-template-areas:
+            'title'
+            'content'
+            'tabs'
+            'image';
+    }
+    .grid-container--crew > .dot-indicators {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .grid-container--crew > picture {
+        margin-bottom: 2em;
+        margin-top: 0;
+        border-bottom: 2px solid var(--clr__accent-transparent);
+    }
+}
+@media (min-width: 45em) {
+    .grid-container--crew {
+        /*grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);*/
+        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+        /*justify-items: start;*/
+        grid-template-areas:
+            '. title title .'
+            '. content image .'
+            '. tabs image .';
+    }
+    .grid-container--crew > picture {
+        margin-bottom: 5em;
+    }
+    .grid-container--crew > .dot-indicators {
+        justify-self: center;
+    }
+    .grid-container--crew > picture {
+        align-self: end;
+        border-bottom: 2px solid var(--clr__accent-transparent);
+    }
+}
+.crew {
+    /*height: 100vh;*/
+    background-image: url(./assets/crew/background-crew-mobile.jpg);
+    background-repeat: no-repeat;
+}
+@media (min-width: 35rem) {
+    .crew {
+        background-position: center center;
+        background-image: url(./assets/crew/background-crew-tablet.jpg);
+    }
+}
+@media (min-width: 45rem) {
+    .crew {
+        background-image: url(./assets/crew/background-crew-desktop.jpg);
+    }
+}
+/* ------------------------ */
+/*     E N D  of Crew       */
+/* ------------------------ */
